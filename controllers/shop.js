@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const config = require("config");
 
 const PDFDocument = require("pdfkit"); //Generate the file on the fly
-const stripe = require("stripe")(process.env.STRIPE_KEY); //3rd party payment API
+
+const stripe = require("stripe")(config.get("stripe_key")); //3rd party payment API
 
 const Product = require("../models/product");
 const Order = require("../models/order");
