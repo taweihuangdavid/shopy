@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "STRIPE_KEY=sk_test_51GqB24K8cGUswp6iCgSR3wi9KFAFA7YEZLjh0SdORpENFQjVpzuM9rGuse5lugiG8HnHg93HWyVlB6VrPHAnPNMC00fxViMBwp node app.js"
+    "start": "STRIPE_KEY= xxx"
   },
   "author": "David Huang",
   "license": "ISC",
