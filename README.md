@@ -36,7 +36,7 @@ Create Selling Products
 ![alt text](https://github.com/taweihuangdavid/shopy/blob/master/images_for_readme/createProduct.JPG)
 
 Update Selling Products
-![alt text](https://github.com/taweihuangdavid/shopy/blob/master/images_for_readme/updateProduct.JPG)
+![alt text](https://github.com/taweihuangdavid/shopy/blob/master/images_for_readme/updateProducts.JPG)
 
 Products
 ![alt text](https://github.com/taweihuangdavid/shopy/blob/master/images_for_readme/products.JPG)
