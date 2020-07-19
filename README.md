@@ -1,6 +1,6 @@
 ## Shopy
 
-This is a simple Web application for Online Shopping.
+This is a simple multi-page Web application for Online Shopping.
 
 ## Technology Stack
 
@@ -8,9 +8,9 @@ Project is created with:
 
 - Server-Side Rendering
 - NodeJs, Express
-- HTML, CSS, EJS
+- HTML, CSS, EJS Template
 - Mongodb, Mongoose
-- 3rd party APIs: Stripe, SendGrid
+- Remote Services (3rd party APIs): Stripe, SendGrid
 
 ## Features
 

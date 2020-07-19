@@ -16,7 +16,6 @@ const shopRoutes = require("./routes/shop");
 const authRoutes = require("./routes/auth");
 
 const db = config.get("db");
-
 const MONGODB_URI = db;
 
 const app = express();
@@ -49,12 +48,12 @@ const fileFilter = (req, file, cb) => {
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-app.use(bodyParser.urlencoded({ extended: false })); //for parsing html form data-type
+app.use(bodyParser.urlencoded({ extended: false })); //for parsing content-type of x-www-urlencoded
 app.use(
   multer({
     storage: fileStorage,
     fileFilter: fileFilter,
-  }).single("image") //image here is the fieldname of the file
+  }).single("image") //"image" here is corresponding to the "name" attribute of the html file form
 );
 app.use(express.static(path.join(__dirname, "public"))); // serve static files -> domain/css/cart.css
 app.use("/images", express.static(path.join(__dirname, "images"))); // domain/images/filename
@@ -66,9 +65,10 @@ app.use(
     saveUninitialized: false,
     store: store,
   })
-); // the package set, send and verify the session Id cookie behind the scene for us.
-//when user get into any page of this website's domain
-//-> will always have a session cookie in their browser and have the corresponding session in BE DB
+);
+// the package set, send and verify the session Id cookie behind the scene for us.
+// when user get into any page of this website's domain
+// -> will always have a session cookie in their browser and have the corresponding session in BE DB
 
 const csrfProtection = csrf();
 app.use(csrfProtection); //will validate the csrfToken if the requests mutated the states (except GET)
@@ -115,7 +115,8 @@ app.use((error, req, res, next) => {
   //   path: "/500",
   //   isAuthenticated: req.session.isLoggedIn,
   // });
-}); //express error handler -> all the express route errors that are thrown will be fallen into this handler
+});
+//express error handler -> all the express route errors that are thrown will be fallen into this handler
 
 mongoose
   .connect(MONGODB_URI, {
