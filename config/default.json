@@ -1,4 +1,4 @@
 {
   "db": "mongodb://localhost/shopy",
-  "stripe_key": "sk_test_51GqB24K8cGUswp6iCgSR3wi9KFAFA7YEZLjh0SdORpENFQjVpzuM9rGuse5lugiG8HnHg93HWyVlB6VrPHAnPNMC00fxViMBwp"
+  "stripe_key": "xxx"
 }
